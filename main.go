@@ -25,7 +25,7 @@ var db *sql.DB
 func main() {
 	var err error
 	// Conectar a la base de datos MySQL
-	dsn := "root:290200Carlos$@tcp(host.docker.internal:3306)/residencias" // Reemplaza con tus credenciales y base de datos
+	dsn := "root:290200Carlos$@tcp(mysql-service:3306)/residencias" // Reemplaza con tus credenciales y base de datos
 	db, err = sql.Open("mysql", dsn)
 	if err != nil {
 		log.Fatal(err)
